@@ -3,7 +3,11 @@
     <a href="{% url 'create' %}">글쓰기</a>
     <ul class="category">
         {% for category in categories %}
-            <li>{{ category.name }}</li>
+            <li>
+                <a href="{% url 'home' %}?category={{ category.id }}">
+                    {{ category.name }}
+                </a>
+            </li>
         {% endfor %}
     </ul>
     <div class="posts">

@@ -1,4 +1,9 @@
 <article class="post">
-    <h1><a href="{% url 'detail' object.id %}">{{ object.title }}</a></h1>
+    <h1>
+        [{{ object.category.name }}]
+        <a href="{% url 'detail' object.id %}">
+            {{ object.title }}
+        </a>
+    </h1>
     {{ object.content|linebreaksbr }}
 </article>
