@@ -1,5 +1,4 @@
 <article class="post">
-    <h1>{{ object.title }}</h1>
+    <h1><a href="{% url 'detail' object.id %}">{{ object.title }}</a></h1>
     {{ object.content|linebreaksbr }}
 </article>
-<hr/>
