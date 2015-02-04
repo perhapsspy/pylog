@@ -11,8 +11,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'created']
+    list_display = ['id','category', 'title', 'created']
     list_filter = ['category']
+    list_editable = ['category']
     list_display_links = ['id', 'title']
     search_fields = ['title', 'content', ]
     ordering = ['-created']
