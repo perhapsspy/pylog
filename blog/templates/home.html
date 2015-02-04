@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
-    <p>hi</p>
+    <div class="posts">
+        {% for object in object_list %}
+            {% include '_post.html' %}
+        {% endfor %}
+    </div>
 {% endblock %}
 
