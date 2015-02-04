@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView
 
 from blog.models import Post
 
@@ -12,3 +12,8 @@ class PostList(ListView):
 class PostDetail(DetailView):
     model = Post
     template_name = 'detail.html'
+
+
+class PostCreate(CreateView):
+    model = Post
+    template_name = 'create.html'

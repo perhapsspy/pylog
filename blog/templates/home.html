@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
+    <a href="{% url 'create' %}">글쓰기</a>
     <div class="posts">
         {% for object in object_list %}
             {% include '_post.html' %}
